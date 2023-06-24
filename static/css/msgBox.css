@@ -1,0 +1,93 @@
+body{
+    background-image:url('/static/img/f176-iurnkpr6874652.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 70%;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+#msgBox{
+    margin: 2% 5%;
+    padding: 2%;
+    height: 75%;
+    background-color: #f0f8ffc4;
+    border-radius: 10px;
+}
+
+#delMsgForm{
+    /* padding: 2%;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 0 5%;
+    border-width: 0; */
+    width: 100%;
+    height: 100%;
+}
+
+#delMsgBut{
+    float: right;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 10%;
+    border: 0;
+    background: aliceblue;
+    margin: 0 0 10px;
+}
+
+#delMsgTable{
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+#delMsgTable::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    /* display: none; */
+}
+
+#delMsgTable::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #535353;
+}
+
+#delMsgTable::-webkit-scrollbar-track {
+/*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px transparent;
+    border-radius: 10px;
+    background   : transparent;
+}
+
+
+#row{
+    height: 5%;
+    margin-top: 10px;
+}
+
+#col1{
+    width: 5%;
+    text-align: center;
+    float: left;
+}
+
+#col2{
+    width: 80%;
+    text-align: center;
+    float: left;
+}
+
+#col3{
+    width: 15%;
+    text-align: center;
+    float: left;
+}
+
+#msgHref{
+    width: 100%;
+}

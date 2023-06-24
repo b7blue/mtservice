@@ -1,0 +1,148 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-image:url('/static/img/TENNENSYOKU_MV.jpg');
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
+}
+
+#header{
+    padding: 25px 25px 55px 20px;
+}
+
+#header a{
+    padding:0 10px;
+    color: aliceblue;
+    text-decoration: none;
+    font-size:25px
+
+}
+
+#navbar{
+    width: 60%;
+    float: left;
+}
+
+#player{
+    width: 20%;
+    margin-top: -12px;
+    margin-left: 189px;
+    float: left;
+}
+
+#page{
+    width: 100%;
+    height: 100%;
+}
+
+#signupbox{
+    position:relative;
+    
+}
+
+#form {
+    width: 100%;
+    height: 100%;
+}
+
+#base_info_form{
+    width: 50%;
+    height: 55%; 
+    background-color: rgba(240, 248, 255,0.8);
+    margin:100px auto;
+    padding:40px;
+    border-radius: 20px;
+    /* position:absolute; */
+    /* transition: all 0.2s; */
+}
+
+#base_info_form_folded{
+    width: 50%;
+    height: 400px; 
+    position:absolute;
+    display: none;
+
+}
+
+
+
+#base_info_header{
+    width:100%;
+    height: 10%;
+    text-align:center;
+    font-size: 33px;
+    font-weight: 600;
+    color: rgb(54, 62, 82);
+}
+
+
+#base_info_header p{
+    margin-top: 10px;
+}
+
+#base_in{
+    width:100%;
+    /* height: 50%; */
+    float: left;
+}
+
+#base_in input{
+    border: 0;
+    background-color: transparent;
+    padding: 20px;
+    width: 80%;
+    font-size: 20px;
+    /* border-bottom:#666 1px solid;
+    border-left-width:0px;
+    border-right-width:0px;
+    border-top-width:0px; */
+}
+
+/* 点击后的样式 */
+#base_in input:focus,#stu_in input:focus{
+    /* border-color: #66afe9; */
+    outline: 0;
+    /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6) */
+
+}
+
+#base_in p{
+    border-bottom:#666 1px solid;
+    border-left-width:0px;
+    border-right-width:0px;
+    border-top-width:0px;
+    margin:10px 0;
+}
+
+#butDiv{
+    width:100%;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}
+
+#submit_but:hover{
+    color: #c0aefa;
+}
+
+
+#submit_but{
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(67, 52, 82);
+    border : 0;
+}
+
+#getVeriCodeResult,#signupResult{
+    height: 40px;
+    width: 50%;
+    float: left;
+}

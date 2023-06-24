@@ -1,0 +1,121 @@
+body {
+    background-image: url('/static/img/inf01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* height: 100%; */
+    /* 防止缩放出现布局变乱 */
+    min-width: 1200px;
+    position:absolute;
+    top:0;
+    left:0;
+    /* 解决不贴边问题 */
+    margin: 0px;
+    
+
+}
+
+div{
+    white-space:nowrap;
+}
+
+#container {
+    height: 100%;
+}
+
+#page {
+    white-space: nowrap;
+    height: 100%;
+    margin: 8% 5%;
+}
+
+#headerimg {
+    margin: 0 auto;
+    display: table-cell;
+}
+
+#searchheader {
+    font-size: x-large;
+    color :#cce5fa
+}
+
+#selectbox {
+    float: right;
+    margin-right: 5%;
+    background: lightgray;
+    border: 0;
+    border-radius: 10px;
+}
+
+#select {
+    float: left;
+    padding-left: 10px;
+    background: lightgray;
+    border: 0;
+    border-radius: 10px;
+}
+
+#type {
+    border: 0;
+    /* border-radius: 10px; */
+    background: transparent;
+    padding: 3px;
+    float: right;
+}
+
+#searchinput {
+    padding: 2%;
+    background: lightgrey;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 4% 5% 0 5%;
+    border-width: 0;
+}
+
+#hrefinput {
+    font-size: 20px;
+    width: 75%;
+    border: 0;
+    background: transparent;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px rgba(211, 211, 211, 0.836) inset;
+    /* -webkit-text-fill-color: #fff; */
+}
+
+#hrefinput:focus {
+    border: 0;
+    outline: none;
+}
+
+#but {
+    float: right;
+    font-size: 20px;
+    width: 15%;
+    border: 0;
+    background: transparent;
+}
+
+
+#downloadbox {
+    display: none;
+    background-color: rgba(211, 211, 211, 0.608);
+    padding: 1%;
+    border-radius: 20px;
+    height: 20px;
+    width: fit-content;
+    float: right;
+    margin-right: inherit;
+    margin-top: 1%;
+}
+
+#filename {
+    float: right;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#gettxtbut{
+    float:right ;
+}

@@ -1,0 +1,36 @@
+body{
+    /* background-image:url('/static/img/3.jpeg'); */
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+#header{
+    
+    padding: 25px 25px 55px 20px;
+    height:max-content;
+}
+
+#header a{
+    padding:0 10px;
+    color: aliceblue;
+    text-decoration: none;
+    font-size:25px
+
+}
+
+#navbar{
+    width: 60%;float: left;
+}

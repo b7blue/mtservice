@@ -1,0 +1,27 @@
+#header{
+    margin: 20px 0;
+}
+
+#taskheader{
+    border: hidden;
+    font-size: xx-large;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+#taskheader:hover{
+    background-color: whitesmoke;
+}
+
+.submit_but{
+    margin: 20px 5px;
+    float: right;
+}
+
+#headerPost{
+    display: none;
+}
+
+/* #mytextarea{
+    height: 80%;
+} */
