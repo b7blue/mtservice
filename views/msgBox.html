@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/msgBox.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+    <script src="/static/js/msgBox.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>home</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="navbar">
+                <a>🐱</a>
+                <a href="/msgBox">收件箱</a> 
+                <a href="/manageSubs">订阅管理</a> 
+                <a href="/txdivownload">文章下载</a>
+                <a href="/login">登录</a>
+                <a href="/signup">注册</a>
+            </div>
+        </div>
+
+        <div id="container">
+
+            <div id="msgBox">
+                <form action="/home" id="delMsgForm">
+                    {{.xsrfdata}}
+                    <div>
+                        <input type="button" id="delMsgBut" onclick="delMsg(delMsgForm)" value="已读">
+                        <input type="button" id="delAllBut" onclick="delAll(delMsgForm)" value="全部已读">
+                    </div>
+                <div id="delMsgTable">
+                    
+
+                    <div id="row">
+                        <div id="col1">选中</div>
+                        <div id="col2">帖子标题</div>
+                        <div id="col3">更新时间</div>
+                    </div>
+
+                        {{range $i, $msg := .msgList}}
+                        <div id="row">
+                            <div class="oneMsg">
+                                <div id="col1">
+                                    <input type="checkbox" name="id" value={{.Id}}>
+                                </div>
+                                    
+                                        <div id="col2">
+                                            <button id="msgHref" onclick="window.location.href='{{.ArticleInfo.Href}}'" type="button" >{{.ArticleInfo.Title}} </button>
+                                        </div>
+                                   
+                                        <div id="col3">
+                                            <div name="lastupdate">
+                                                {{dateformat .ArticleInfo.Lastupdate "2006-1-2 15:04"}}
+                                            </div>
+                                        </div>
+
+
+                                    
+
+                            </div>
+                        </div>
+
+
+
+                        {{end}}
+                    
+                    </div>
+            </form>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>

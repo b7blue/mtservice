@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/static/css/txtdownload.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+
+    <script src="/static/js/txtdownload.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>mtslash-txtdownload</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="header">
+            <div id="navbar">
+                <a>🐱</a>
+                <a href="/msgBox">收件箱</a>
+                <a href="/manageSubs">订阅管理</a>
+                <a href="/txtdownload">文章下载</a>
+                <a href="/login">登录</a>
+                <a href="/signup">注册</a>
+            </div>
+        </div>
+
+        <div id="page" >
+
+
+
+            <div id="searchheader" style="font-size: x-large;">
+                <img id="headerimg" src="/static/img/title.gif">
+                <p style="margin: 20px;text-align: center;">📢反对不经作者同意的作品传播📢</p>
+            </div>
+
+            <div id="searchbox">
+                <!-- form表单使用xsrf防护， 提交时不需要做特殊处理，只需要在sform标签里获取后端传过来的xsrf key即可 -->
+                <form id="postForm" >
+                    {{.xsrfdata}}
+                    <!-- 获取get请求时后端传过来的xsrf防护的key -->
+                    <div id="searchinput">
+                        <input type="text" id="hrefinput" name="href" required placeholder="请输入帖子链接" />
+                        <input type="button" id="but" value="👀GET TXT!" onclick="post2TXT(postForm)">
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="downloadbox">
+                <div id="filename"></div>
+                <div id="gettxtbut">
+                    <form action="/gettxt" id="downloadform" enctype="application/x-www-form-urlencoded" method="GET">
+                        <!-- {{.xsrfdata}} -->
+                        <input type="text" style="display: none;" name="filename" id="filenameinput"/>
+                        <input type="submit" value="点击下载👓!" >
+                    </form>
+                </div>
+            </div>
+
+           
+
+        </div>
+    </div>
+
+    </div>
+
+</body>

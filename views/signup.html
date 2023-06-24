@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/signup.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+    <script src="/static/js/signup.js"></script>
+       
+
+    <meta charset="UTF-8">
+   
+    <title>signup</title>
+</head>
+
+<body>
+
+    <div id="container" >
+     
+        <div id="header">
+            <div  id = "navbar" >
+                <a>🐱</a>
+                <a href="/msgBox">收件箱</a> 
+                <a href="/manageSubs">订阅管理</a> 
+                <a href="/txtdownload">文章下载</a>
+                <a href="/login">登录</a>
+                <a href="/signup">注册</a>
+            </div> 
+        </div>
+
+        
+        <div id="page" >
+
+             
+                  <!-- form表单使用xsrf防护， 提交时不需要做特殊处理，只需要在form标签里获取后端传过来的xsrf key即可 -->
+                <form name="myForm" id="form" > 
+
+                    {{.xsrfdata}}     <!-- 获取get请求时后端传过来的xsrf防护的key -->
+                    
+                    <div id = "base_info_form">
+                        <div id = "base_info_header" >
+                            <p>开始注册</p>
+                        </div>
+
+                        <div id = "base_in">
+                            <p><input type="text" name="email" placeholder="请输入可用的邮箱" /></p>
+                            <p><input type="password" name="pw" placeholder="请输入密码" /></p>
+                            <p><input type="password" name="pw1" placeholder="请重复密码"/></p>
+                            <p>
+                                <input type="text" name="vericode" placeholder="填入收到的验证码" />
+                                <button type="button" onclick="getVeriCode()">获取验证码</button>
+                            </p>
+                            <!-- 点击获取验证码的返回结果 -->
+                            <div id="getVeriCodeResult"></div>
+                            <div id="signupResult"></div>
+                        </div>
+
+                        <div id="butDiv">
+                            <input type="button" onclick="signUp(form)" value="SIGN UP" id="submit_but">
+                        </div>
+    
+                        
+                    </div>
+                    
+                </form>
+                
+        </div>  
+    </div>
+
+</body>

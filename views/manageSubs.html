@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/manageSubs.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+    <script src="/static/js/manageSubs.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>home</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="navbar">
+                <a>🐱</a>
+                <a href="/msgBox">收件箱</a>
+                <a href="/manageSubs">订阅管理</a>
+                <a href="/txtdownload">文章下载</a>
+                <a href="/login">登录</a>
+                <a href="/signup">注册</a>
+            </div>
+        </div>
+
+        
+
+             <!-- 搜索框，新增订阅，表单1 -->
+        <div id="addSubDiv">
+            <div id="addSubResult"></div>
+            <form id="addSubForm">
+                {{.xsrfdata}}
+                <input type="text" id="urlBox" name="url" required placeholder="请输入想要订阅的文章链接" />
+                <input type="button" id="addSubBut" value="提交🍖" onclick="addSub(addSubForm)">
+            </form>
+            
+        </div>
+
+        <!-- 可以复选删除订阅，表单2 -->
+        <div id="delSubDiv">
+            <form id="delSubForm">
+                {{.xsrfdata}}
+                <input type="button" onclick="delSub(delSubForm)" id="delSubBut" value="删除订阅">
+                <div id="delSubTable">
+                    <div id="row">
+                        <div id="col1">选中</div>
+                        <div id="col2">帖子标题</div>
+                    </div>
+
+                    {{range $i, $a := .subList}}
+
+                    <div id="onesub">
+                        <div id="row">
+                            <div id="col1">
+                                <input type="checkbox" name="tid" value={{.Tid}}>
+                            </div>
+                            <div id="col2">
+                                    <button id="subHref" onclick="window.location.href='{{.Href}}'" type="button" >
+                                            {{.Title}}
+
+                                    </button>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    {{end}}
+                </div>
+
+
+            </form>
+        </div>
+
+
+    
+
+       
+
+
+
+
+    </div>
+
+</body>
